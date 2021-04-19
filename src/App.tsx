@@ -1,10 +1,12 @@
 import React from "react";
-import logo from "./assets/logo.jpg";
-import backgroundImg from "./assets/background.jpg";
 import Layout from "./components/Layout/Layout";
 import TransferForm from "./components/TransferForm/TransferForm";
 import Panel from "./components/Panel/Panel";
 import "./assets/styles/app.scss";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import logo from "./assets/logo.jpg";
+import backgroundImg from "./assets/background.jpg";
+import briefcaseIcon from './assets/icons/briefcase.png'
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         </div>
       </header>
       <Layout sidebarComponent={<TransferForm />} backgroundImg={backgroundImg}>
-        <Panel title={"Recent Transactions"}>Heey</Panel>
+        <Panel title={"Recent Transactions"} icon={briefcaseIcon}>
+            <TransactionHistory />
+        </Panel>
       </Layout>
     </div>
   );

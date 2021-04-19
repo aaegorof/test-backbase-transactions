@@ -1,0 +1,29 @@
+.transaction-item-wrap {
+  border: 1px solid #ccc;
+  border-left-width: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  .merchant-logo {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 2rem;
+    filter: grayscale(1);
+  }
+  .merchant-title{
+    font-size: 1.2em;
+  }
+  .amount {
+    margin-left: auto;
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  & + .transaction-item-wrap {
+    border-top: none;
+  }
+  &:hover {
+    .merchant-logo {
+      filter: none;
+    }
+  }
+}

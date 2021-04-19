@@ -1,9 +1,6 @@
 @import "./variables";
 @import "./mixins";
 
-@function rem($mult: 1) {
-  @return calc(#{$font-size} * #{$mult});
-}
 
 $fontsPath: "../fonts/#{$font-family}/#{$font-family}";
 
@@ -23,10 +20,10 @@ body {
 }
 
 h2, .h2 {
-  font-size: rem(1.5);
+  font-size: 1.5rem;
   font-weight: normal;
 }
 h3, .h3 {
-  font-size: rem(1.2);
+  font-size: 1.2rem;
   font-weight: normal;
 }
