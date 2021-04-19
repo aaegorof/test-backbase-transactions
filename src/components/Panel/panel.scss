@@ -1,0 +1,9 @@
+@import "../../assets/styles/variables";
+.panel-wrap {
+  .panel-header {
+    background: $primary;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+  }
+}

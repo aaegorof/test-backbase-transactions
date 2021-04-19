@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./mixins";
+
+@function rem($mult: 1) {
+  @return calc(#{$font-size} * #{$mult});
+}
+
+$fontsPath: "../fonts/#{$font-family}/#{$font-family}";
+
+@include font-face($font-family, "#{$fontsPath}-Thin", normal, 200);
+@include font-face($font-family, "#{$fontsPath}-Light", normal, 300);
+@include font-face($font-family, "#{$fontsPath}-Regular", normal, 400);
+@include font-face($font-family, "#{$fontsPath}-Medium", normal, 500);
+@include font-face($font-family, "#{$fontsPath}-Bold", normal, 600);
+@include font-face($font-family, "#{$fontsPath}-Black", normal, 700);
+
+html {
+  font-size: $font-size;
+}
+body {
+  font-family: $font-family, Helvetica, sans-serif;
+  font-size: $font-size;
+}
+
+h2, .h2 {
+  font-size: rem(1.5);
+  font-weight: normal;
+}
+h3, .h3 {
+  font-size: rem(1.2);
+  font-weight: normal;
+}

@@ -1,23 +1,21 @@
-import React from 'react';
-import logo from './assets/icons/briefcase.png';
+import React from "react";
+import logo from "./assets/logo.jpg";
+import Layout from "./components/Layout/Layout";
+import './assets/styles/app.scss'
+import TransferForm from "./components/TransferForm/TransferForm";
+import Panel from "./components/Panel/Panel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app-wrap">
+      <header className="app-header container">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Layout sidebarComponent={<TransferForm/>}>
+          <Panel title={'Recent Transactions'}>
+              Heey
+          </Panel>
+      </Layout>
     </div>
   );
 }

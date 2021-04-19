@@ -1,0 +1,57 @@
+/// Grid
+$container: 1200px;
+$columns: 12;
+
+//Colors
+$text-color: #282420;
+$primary: #0F8397;
+$active: #EE7033;
+
+$green: #75B644;
+
+$grey: #D6D2CE;
+
+$grey-border: rgba(#253C73, 0.2);
+$bg-color: #F4F5F8;
+
+
+/// Fonts
+$font-size: 12px;
+$font-family: "Kanit";
+
+/// Media sizes and breakpoints
+$breakpoints: (
+        xs: 320px,
+        sm: 425px,
+        md: 900px,
+        lg: 1040px,
+        xl: 1440px
+);
+
+$colors: (
+        white: #fff,
+        primary: $primary,
+        active: $active,
+        green: $green,
+        grey: $grey,
+);
+
+/// Margins
+$margins: (
+        xs: 1rem,
+        sm: 2rem,
+        md: 3rem,
+        lg: 4rem,
+        xl: 100px
+);
+$min-margin: 1rem;
+
+
+/// Additional variables:
+$radius: 4px;
+$button-height: 34px;
+$input-height: 34px;
+
+
+$sm: nth(nth($breakpoints, 2), 2);
+$md: nth(nth($breakpoints, 3), 2);
