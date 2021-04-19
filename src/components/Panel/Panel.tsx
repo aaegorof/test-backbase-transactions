@@ -15,7 +15,9 @@ const Panel: React.FC<Props> = (props) => {
                 {icon && <img src={icon} alt={title}/>}
                 <div className={'h3'}>{title}</div>
             </div>
-            {children}
+            <div className="panel-body">
+                {children}
+            </div>
         </div>
     )
 }

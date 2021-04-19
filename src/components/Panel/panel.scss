@@ -1,9 +1,18 @@
 @import "../../assets/styles/variables";
 .panel-wrap {
+  $padding: 18px;
   .panel-header {
     background: $primary;
     color: #fff;
     text-align: center;
-    padding: 18px;
+    padding: $padding;
+    img {
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+  .panel-body {
+    padding: $padding;
+    background: #fff;
   }
 }

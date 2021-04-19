@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables";
+
+.app-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-header {
+  border-bottom: 2px solid $active;
+}
+.app-body {
+  flex: 1;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: $md) {
+  .sidebar {
+    & + .main-content {
+      margin-top: 30px;
+    }
+  }
+}
