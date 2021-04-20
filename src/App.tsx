@@ -6,7 +6,7 @@ import "./assets/styles/app.scss";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import logo from "./assets/logo.jpg";
 import backgroundImg from "./assets/background.jpg";
-import briefcaseIcon from './assets/icons/briefcase.png'
+import briefcaseIcon from "./assets/icons/briefcase.png";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       </header>
       <Layout sidebarComponent={<TransferForm />} backgroundImg={backgroundImg}>
         <Panel title={"Recent Transactions"} icon={briefcaseIcon}>
-            <TransactionHistory />
+          <TransactionHistory />
         </Panel>
       </Layout>
     </div>
