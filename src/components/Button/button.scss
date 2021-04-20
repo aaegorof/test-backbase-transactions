@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables";
+
+.button {
+  font-size: 13px;
+  text-transform: uppercase;
+  border: 1px solid $grey;
+  color: $text-fade;
+  padding: 1rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $button-height;
+  box-sizing: border-box;
+  line-height: 1;
+  white-space: nowrap;
+  background: transparent;
+  outline: none;
+  &.type-active {
+    background: $active;
+    color: #fff;
+    border-color: $active;
+  }
+  &.shape-rounded {
+    border-radius: $radius;
+  }
+}
