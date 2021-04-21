@@ -1,3 +1,4 @@
+@import "../../assets/styles/variables";
 .transaction-item-wrap {
   border: 1px solid #ccc;
   border-left-width: 8px;
@@ -10,7 +11,18 @@
     margin: 0 2rem;
     filter: grayscale(1);
   }
-  .merchant-title{
+  div.merchant-logo {
+    background: $grey;
+    &:before {
+      content: "holder";
+      font-size: 9px;
+      transform: rotate(321deg);
+      position: absolute;
+      left: 20%;
+      top: 30%;
+    }
+  }
+  .merchant-title {
     font-size: 1.2em;
   }
   .amount {

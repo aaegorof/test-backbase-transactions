@@ -1,0 +1,33 @@
+@import "../../assets/styles/variables";
+
+.sort-by-label {
+  margin-right: 20px;
+}
+.sorter-holder {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: $sm) {
+  .sort-by-label {
+    width: 100%;
+  }
+  .sorter-holder {
+    flex-wrap: wrap;
+  }
+}
+.arrow {
+  $size: 6px;
+  border: $size solid transparent;
+  border-left-width: $size * 2 /3;
+  border-right-width: $size * 2/3;
+  margin-left: 4px;
+  &.asc {
+    border-bottom-color: $text-fade;
+    transform: translateY(-2px);
+  }
+  &.desc {
+    border-top-color: $text-fade;
+    transform: translateY($size - 2px);
+  }
+}

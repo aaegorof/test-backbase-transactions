@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { ITransactionItem } from "../components/TransactionItem/types";
 import fakeData from "../mock/transactions.json";
 
@@ -12,8 +12,8 @@ interface InitialState {
 
 const INITIALSTATE: InitialState = {
   entities: fakeData?.data || [],
-  sortOrder: null,
-  sortField: null,
+  sortOrder: 'desc',
+  sortField: "transactionDate",
   filteredText: "",
 };
 
@@ -26,6 +26,10 @@ export const transactionsSlice = createSlice({
     //transactionAdded: (state, action) => state.concat(action.payload),
     filterTextAdded: (state, action) => {
       state.filteredText = action.payload
+    },
+    addTransaction: (state, action) => {
+      const transaction = action.payload
+      state.entities = [...state.entities, transaction]
     },
     sortButtonClicked: (state, action) => {
       const key = action.payload;
@@ -41,5 +45,5 @@ export const transactionsSlice = createSlice({
   },
 });
 
-export const { sortButtonClicked, filterTextAdded } = transactionsSlice.actions;
+export const { sortButtonClicked, filterTextAdded, addTransaction } = transactionsSlice.actions;
 export default transactionsSlice.reducer;
