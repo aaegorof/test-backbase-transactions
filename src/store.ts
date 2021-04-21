@@ -1,13 +1,13 @@
 import {
-  createEntityAdapter,
-  createSlice,
   configureStore
 } from '@reduxjs/toolkit'
 import transactionsSlice from './slices/transactionsSlice'
+import transformSlice from "./slices/tranferSlice";
 
 const store = configureStore({
   reducer: {
-    transactions: transactionsSlice
+    transactions: transactionsSlice,
+    transfer: transformSlice
   }
 })
 
