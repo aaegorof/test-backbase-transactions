@@ -82,6 +82,9 @@
         .mg-#{$name}-#{$i}-r {
           margin-right: $mg;
         }
+        .mg-#{$name}-0-t {
+          margin-top: 0;
+        }
         .mg-#{$name}-#{$i}-t {
           margin-top: $mg;
         }

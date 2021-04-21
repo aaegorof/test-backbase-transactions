@@ -17,4 +17,10 @@
     padding: $padding;
     background: #fff;
   }
+  &.small {
+    .panel-header {
+      padding-top: $padding/2;
+      padding-bottom: $padding/2;
+    }
+  }
 }
